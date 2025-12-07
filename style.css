@@ -70,3 +70,17 @@ a {
   width: 100%;
 }
 
+.nav-btn {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #38bdf8;
+  color: #38bdf8 !important;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.nav-btn:hover {
+  background: #38bdf8;
+  color: #0f172a !important;
+}
+
