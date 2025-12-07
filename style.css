@@ -103,5 +103,28 @@ a {
   display: inline-block !important;
 }
 
+.button-fire {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-fire::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #ff7b00, #ff4500, transparent);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1);
+  border-radius: 50%;
+  transition: 0.4s ease-out;
+}
+
+.button-fire.fire-animate::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(20);
+}
 
 
