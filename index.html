@@ -595,26 +595,38 @@ nav a:focus {
   }
 </script>
 
-  <script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
   const user = JSON.parse(localStorage.getItem("loggedUser"));
   const loginBtn = document.getElementById("loginBtn");
   const logoutBtn = document.getElementById("logoutBtn");
   const welcome = document.getElementById("welcomeUser");
 
-  if (user) {
-    loginBtn.style.display = "none";
-    logoutBtn.style.display = "inline-block";
+  console.log("USER:", user); // يساعد نتأكد من القراءة
 
-    if (welcome) {
-      welcome.textContent = "ارحب يا " + user.name;
-    }
+  if (user) {
+    // إظهار الترحيب
+    welcome.textContent = "ارحب يا " + user.name;
+
+    // إخفاء زر تسجيل الدخول
+    if (loginBtn) loginBtn.style.display = "none";
+
+    // إظهار زر تسجيل الخروج
+    if (logoutBtn) logoutBtn.style.display = "inline-block";
   }
 
-  logoutBtn.addEventListener("click", () => {
-    localStorage.removeItem("loggedUser");
-    window.location.reload();
-  });
+  // زر تسجيل الخروج
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("loggedUser");
+      window.location.reload();
+    });
+  }
+
+});
 </script>
+
 
 </body>
 </html>
