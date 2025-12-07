@@ -22,36 +22,41 @@ body {
 /*     NAVBAR      */
 /* =============== */
 
-.nav-container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 nav ul {
-  display: flex;
-  gap: 12px;
   list-style: none;
+  display: flex;
+  flex-direction: column; /* يخليها طوليّة */
+  gap: 10px;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li a {
-  display: inline-block;
-  padding: 8px 16px;
+  display: block;
+  padding: 10px 20px;
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 10px;
-  transition: 0.2s;
+  border-radius: 12px;
   font-weight: 700;
   color: #e5e7eb;
+  text-decoration: none !important; /* يشيل الخط */
+  transition: 0.2s;
 }
 
 nav ul li a:hover {
-  background: rgba(56,189,248,0.15);
+  background: rgba(56, 189, 248, 0.15);
   border-color: #38bdf8;
   color: #38bdf8;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
 }
 
 /* =============== */
@@ -211,3 +216,4 @@ nav ul li a:hover {
 }
 
 
+  
