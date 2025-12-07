@@ -8,6 +8,10 @@
   font-weight: 700; /* الخط عريض */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #0f172a;
   color: #e5e7eb;
