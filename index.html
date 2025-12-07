@@ -595,5 +595,29 @@ nav a:focus {
   }
 </script>
 
+  <script>
+  const user = JSON.parse(localStorage.getItem("loggedUser"));
+  const loginBtn = document.getElementById("loginBtn");
+  const logoutBtn = document.getElementById("logoutBtn");
+  const welcome = document.getElementById("welcomeUser");
+
+  if (user) {
+    // إخفاء تسجيل الدخول
+    loginBtn.style.display = "none";
+
+    // إظهار تسجيل الخروج
+    logoutBtn.style.display = "block";
+
+    // كتابة ارحب يا (اسمه)
+    if (welcome) welcome.textContent = "ارحب يا " + user.name;
+  }
+
+  // وظيفة تسجيل الخروج
+  logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("loggedUser"); // مسح الجلسة
+    window.location.reload(); // إعادة تحميل الصفحة
+  });
+</script>
+
 </body>
 </html>
