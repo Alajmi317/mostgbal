@@ -244,3 +244,22 @@ nav ul {
   box-shadow: 0 12px 30px rgba(34, 197, 94, 0.55);
 }
 
+/* زر شاشة الترحيب */
+.start-btn {
+  padding: 14px 34px !important;
+  font-size: 22px !important;
+  border-radius: 999px !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  background: linear-gradient(135deg, #0ea5e9, #22c55e) !important;
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.35) !important;
+  transition: 0.2s !important;
+  display: inline-block !important;
+}
+
+.start-btn:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 12px 30px rgba(34, 197, 94, 0.55) !important;
+}
