@@ -702,6 +702,25 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 </script>
 
+    <script>
+  const intro = document.getElementById("intro-screen");
+  const startBtn = document.getElementById("start-btn");
+
+  if (intro && startBtn) {
+    startBtn.addEventListener("click", () => {
+      // إضافة كلاس يخليها تبدأ تختفي
+      intro.classList.add("hide");
+
+      // بعد 800ms (نفس وقت transition) نخفيها نهائياً
+      setTimeout(() => {
+        intro.style.display = "none";
+      }, 800);
+    });
+  }
+</script>
+</body>
+</html>
+
     
 </body>
 </html>
