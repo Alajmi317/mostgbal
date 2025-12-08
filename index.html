@@ -177,6 +177,45 @@
     .section-title { font-size: 1.4rem; margin-bottom: 1rem; }
     .section-description { font-size: 0.95rem; color: #cbd5f5; margin-bottom: 1.5rem; }
 
+    /* يخلي القائمة على يمين الشاشة وثابتة */
+.sidebar-nav {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 99999;
+}
+
+/* ترتيب العناصر بشكل عمودي */
+.sidebar-nav ul {
+  list-style: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  align-items: flex-end !important;
+}
+
+/* شكل الأزرار */
+.sidebar-nav ul li a {
+  display: block;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  font-weight: 700;
+  color: #e5e7eb;
+  text-decoration: none !important;
+  transition: 0.2s ease;
+}
+
+/* عند المرور */
+.sidebar-nav ul li a:hover {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+    
   </style>
 </head>
 
